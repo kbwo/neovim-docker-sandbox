@@ -1,0 +1,9 @@
+services:
+  neovim:
+    build: .
+    image: neovim-sandbox
+    container_name: neovim_sandbox
+    volumes:
+      - ./init.vim:/home/devuser/.config/nvim/init.vim
+    stdin_open: true
+    tty: true
